@@ -7,7 +7,7 @@ const postsRouter = require('./routes/posts');
 
 require('dotenv').config();
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 const databaseURL = process.env.ATLAS_URL;
 mongoose.connect(databaseURL, { useNewUrlParser: true, useCreateIndex: true }
