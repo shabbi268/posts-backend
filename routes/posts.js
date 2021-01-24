@@ -17,7 +17,6 @@ router.route('/add').post((req, res) => {
     description,
     date,
   });
-  console.log(`newPost: `,newPost);
 
   newPost.save()
   .then(() => res.json('Post created and added!'))
