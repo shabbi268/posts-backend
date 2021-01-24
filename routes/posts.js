@@ -10,13 +10,14 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
   const title = req.body.title;
   const description = req.body.description;
-  const date = new Date();
+  const date = req.body.date;
 
   const newPost = new Posts({
     title,
     description,
     date,
   });
+  console.log(`newPost: `,newPost);
 
   newPost.save()
   .then(() => res.json('Post created and added!'))
