@@ -11,6 +11,7 @@ router.route('/add').post((req, res) => {
   const title = req.body.title;
   const description = req.body.description;
   const date = req.body.date;
+  console.log(`date: `,date);
 
   const newPost = new Posts({
     title,
